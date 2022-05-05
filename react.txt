@@ -1,0 +1,130 @@
+CWH TUTORIAL 1 & 2 on 2nd may monday
+
+npm create react app means you bought something permanently and your stroge space in your ssd is fatlu then do that 
+
+instead use npx it will installed only when you want to use 
+
+it is basically a library of js but many people use it as a framework as it gives a direct compititon to anglur and all 
+
+
+what is component based architecture?
+  ---> we can divide a webpage into components and its biggest advantage is that we can reuse it again and if we want to change any of one component then we can do change and render it again without changing the another 
+
+
+  Node js use during run time . it is useful to start the website without using the web browser
+
+
+  Now understand the folder structure 
+   ---> whatever modules require it comes into node modules 
+
+     ---> if you want to change the node modules then it can change with the help of package.json and 
+
+
+      --->now there will be two folders only that is public and src . Whatever components we create then it is created into the src folder 
+      and in that components contains props and states 
+
+      what is props and states 
+      ---> let a template is created and it consist of some fields and we can fill details in that form then only it is form and sending that form along with details that is props
+
+      ---> let this is component and its heading is harry  
+      ek component ke state ka matlab hai ki usme kya kya details hai 
+          
+          props means that whatever details send and change its condition
+
+
+CWH TUT 3&4 3rd may tuesday 
+10:26 PM 5/3/2022
+with the use of REACT we can use the API very easily and we dont have to write more js 
+
+in index.js
+     all the components comes into this 
+     there is use of strictmode also and one should use it 
+
+
+in app.js 
+  whatever website i can see then the code of app.js is rendering 
+    whatever create react app then on website the code of app.js . and we have to edit only app.js 
+      
+      there are two types of components one is funciton based and another is class based . But nowadays function based component are more used 
+           in this whatever code is there then that is JSX (javascriptXML) . it is HTML only who wear JS mukut .
+
+
+           htmlFor , tabIndex , className
+
+           remember only one element/tag i have to return from app.js 
+
+           what is jsx fregment?
+           <></>
+           and inside this you can add more tags   
+           even i can add the components also with syntax like <Navbar/> a closing tag is imp here 
+           and whatever we write into the {} curly braces then it will be work as a javascript   
+
+      
+
+How the website actually work in mutlipage web application 
+   	---> Then whenever user come and sent the request to the server then in response HTML + CSS + JS will delivered of respective page like about ki html , css and js will be different then contact ki different aayegi likewise 
+
+How the website actually work in a single page web application 
+  	----> Then here just only single time user sent the request and only single time HTML , CSS and JS will be delivered and then from here JS will takeover and page will be responded with help of APIs, just only the data will change and not the css of header or footer , and data will come with the help of APIs 
+
+                       with these method one can save llots of bandwidth as well as reduce the load on server and space too in users device 
+
+		always remember that we never share the node modules folder as it can be installed by anyone from the internet and because of this reason only the modules fall down into gitignore folder . you can installed with command line "npm install"
+
+
+
+CWH TUT 5&6 4th may tuesday 
+10:26 PM 5/4/2022
+Now its time to understand the props it means properties 
+    ----> we can sent object or boolean and using that value components gets rendered itself . 
+
+    try to use the ES7 react/redux it will provide shortcuts and very useful and saves a lots of time 
+
+      Note : Please dont remove comments 
+    namedexport and export default 
+
+Props 
+    ---> always write the name of components start with capital letter
+
+    means we are giving something to my components and i will fill the info according my correspondence . and props can be sent from app.js . 
+        --->props should be read only that is we cant change the props directly in the function and that props remeains as it is but the text can be change 
+
+        types of props 
+        Navbar propTypes = {
+          title : propTypes.string,
+          abouttext : propTypes.string,
+
+        } try to use the react.org
+        Navbar propTypes = {
+          title : propTypes.string.isRequired,
+          abouttext : propTypes.string,
+
+        } 
+        try to add the isRequired condition to most of props as it is good 
+
+        Default prop use when if I forget to send the props then set this default props 
+
+        Navbar.defaultProps ={
+          title : "textutils"
+          abouttext : "sdf"
+        } it is the good practice to write the defaultProps
+
+        Atlast props is nothing but just we are sending the value while calling the components or with the help of defaultProps and we can set the types of prop with help of propTypes
+
+ 
+ Time to Understand the State (awastha use cheez ki )
+          ek perticular time pe use cheez ki state kuch hoti hai . jese ki maine textform mai kuch likha to use wakt ki vo useki state ho gayi 
+
+          useState used to create a state variable and with use of it we can change the existing state of anything i means user can change the existing state with this now 
+
+          {useState} import it from react 
+          const [text , setText] = useState("0"); // here we did inititalize the text and setText
+          can change the text with setText 
+
+          React Hooks 
+              ----> we use {useState} is the hook
+              first i import useState from react 
+              we can use the features of class without createing the class 
+
+
+$0 means is that element which one you have selected and it is use only when you are on chrome only
