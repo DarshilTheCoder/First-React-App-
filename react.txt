@@ -51,8 +51,8 @@ in app.js
 
            htmlFor , tabIndex , className
 
-           remember only one element/tag i have to return from app.js 
-
+           remember only one element/tag i have to return from any js file 
+           to  use the number of tags or elements we use the jsx fregment
            what is jsx fregment?
            <></>
            and inside this you can add more tags   
@@ -73,7 +73,7 @@ How the website actually work in a single page web application
 
 
 
-CWH TUT 5&6 4th may tuesday 
+CWH TUT 5&6 4th may wednesday 
 10:26 PM 5/4/2022
 Now its time to understand the props it means properties 
     ----> we can sent object or boolean and using that value components gets rendered itself . 
@@ -112,7 +112,9 @@ Props
         Atlast props is nothing but just we are sending the value while calling the components or with the help of defaultProps and we can set the types of prop with help of propTypes
 
  
- Time to Understand the State (awastha use cheez ki )
+ CWH TUT 7&8 5th may Thurday
+
+    Time to Understand the State (awastha use cheez ki )
           ek perticular time pe use cheez ki state kuch hoti hai . jese ki maine textform mai kuch likha to use wakt ki vo useki state ho gayi 
 
           useState used to create a state variable and with use of it we can change the existing state of anything i means user can change the existing state with this now 
@@ -128,3 +130,58 @@ Props
 
 
 $0 means is that element which one you have selected and it is use only when you are on chrome only
+
+CWH TUT 11 6th may Friday
+
+    Now we doing some improvment in dark mode is that we are hadling the dark mode from App.js only by sending the props to the Navbar.js
+       for to do that you have to use the ``(i.e backticks) so that you can use the js in Navbar.js and do some changes
+
+CWH TUT 12&13 7th may saturday
+
+     All things is written in app.js 
+      const [mode, setmode] = useState('light');
+      const [switchText, setswitchText] = useState("Enable Dark Mode") // with this state i am changing the text part 
+      const toggleMode = ()=>{
+         if (mode === "light" && switchText ==="Enable Dark Mode") {
+             // see mode and switchText is the state variable so whenever i use the toggleMode funciton then at that time both state variable   comes into the use 
+             setmode("dark");
+             setswitchText("Disable Dark Mode");
+            document.body.style.backgroundColor="#091240";
+
+
+        }
+       else{
+         setmode("light");
+         setswitchText("Enable Dark Mode");
+         document.body.style.backgroundColor="#091240";
+
+    }
+  }
+
+    <Navbar title = "textutils" abouttext ="About Us" mode = {mode} toggleMode = {toggleMode} switchText = {switchText}/>
+      
+      This is written is Navbar.js 
+          <div className={`form-check form-switch text-${props.mode ==="light"?"dark":"light"}`}> with use of this mode i am changing the color of switch part with use of ternary operator
+
+              remember to add the background color then use the document.style.backgroundColor = "name of color"
+
+
+Now its time to add the dismissial alert in the js with the use of alert.js components
+    we are using the function based component for the alert 
+
+    NOTE THAT 
+
+
+    CWH TUT 16&17 9th may monday 
+        React Router means things which will not change then i will not bring everytime from the server what it means ki if your Navbar is not changing or stay same in everypage then dont reload or bring from the server  . so that it will saves a lots of bandwidth and spaces also . 
+
+          npm install react-router-dom 
+          and it is wrap between router and things in switch 
+          and use the exact path
+
+      Github pages ans hosting 
+        npm run-build
+            it will create a build folder and make a static website for you . react create a optimized the app behind the scenes and ti will get by running it 
+        npm run start 
+            it will just give development server
+            
